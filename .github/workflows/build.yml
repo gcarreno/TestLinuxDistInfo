@@ -79,9 +79,11 @@ jobs:
     - name: Create release files
       run: |
         cd TestLinuxDistInfo
+        mkdir locale
+        cp ../src/i18n/TestLinuxDistInfo.*.po locale
         chmod +x TestLinuxDistInfo-*
-        tar -zcvf TestLinuxDistInfo-GTK2-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz TestLinuxDistInfo-gtk2
-        tar -zcvf TestLinuxDistInfo-Qt5-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz TestLinuxDistInfo-qt5
+        tar -zcvf TestLinuxDistInfo-GTK2-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz TestLinuxDistInfo-gtk2 locale
+        tar -zcvf TestLinuxDistInfo-Qt5-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz TestLinuxDistInfo-qt5 locale
     - name: Create GitHub release
       uses: softprops/action-gh-release@v1
       with:
