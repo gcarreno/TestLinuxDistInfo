@@ -1,0 +1,18 @@
+{"version":1,"strings":[
+{"hash":227686302,"name":"tfrmmain.caption","sourcebytes":[102,114,109,77,97,105,110],"value":"frmMain"},
+{"hash":263302752,"name":"tfrmmain.cgavaiilablemethods.caption","sourcebytes":[32,65,118,97,105,108,97,98,108,101,32,77,101,116,104,111,100,115,32],"value":" Available Methods "},
+{"hash":2805797,"name":"tfrmmain.mnufile.caption","sourcebytes":[38,70,105,108,101],"value":"&File"},
+{"hash":193520446,"name":"tfrmmain.mnuinfo.caption","sourcebytes":[38,73,110,102,111,114,109,97,116,105,111,110],"value":"&Information"},
+{"hash":4710148,"name":"tfrmmain.actfileexit.caption","sourcebytes":[69,38,120,105,116],"value":"E&xit"},
+{"hash":315140,"name":"tfrmmain.actfileexit.hint","sourcebytes":[69,120,105,116],"value":"Exit"},
+{"hash":45661337,"name":"tfrmmain.actinfoquery.caption","sourcebytes":[38,81,117,101,114,121],"value":"&Query"},
+{"hash":232942051,"name":"tfrmmain.actinfoquery.hint","sourcebytes":[81,117,101,114,121,124,81,117,101,114,121,32,115,121,115,116,101,109,32,102,111,114,32,107,110,111,119,110,32,102,105,108,101,115],"value":"Query|Query system for known files"},
+{"hash":7383733,"name":"tfrmmain.actinfoissue.caption","sourcebytes":[105,115,115,117,101],"value":"issue"},
+{"hash":83965877,"name":"tfrmmain.actinfoissue.hint","sourcebytes":[105,115,115,117,101,124,68,105,115,112,108,97,121,32,99,111,110,116,101,110,116,115,32,111,102,32,105,115,115,117,101],"value":"issue|Display contents of issue"},
+{"hash":179848292,"name":"tfrmmain.actinfoissuenet.caption","sourcebytes":[105,115,115,117,101,46,110,101,116],"value":"issue.net"},
+{"hash":243038052,"name":"tfrmmain.actinfoissuenet.hint","sourcebytes":[105,115,115,117,101,46,110,101,116,124,68,105,115,112,108,97,121,32,99,111,110,116,101,110,116,115,32,111,102,32,105,115,115,117,101,46,110,101,116],"value":"issue.net|Display contents of issue.net"},
+{"hash":147185365,"name":"tfrmmain.actinfoosrelease.caption","sourcebytes":[111,115,45,114,101,108,101,97,115,101],"value":"os-release"},
+{"hash":37454725,"name":"tfrmmain.actinfoosrelease.hint","sourcebytes":[111,115,45,114,101,108,101,97,115,101,124,68,105,115,112,108,97,121,32,99,111,110,116,101,110,116,115,32,111,102,32,111,115,45,114,101,108,101,97,115,101],"value":"os-release|Display contents of os-release"},
+{"hash":147926485,"name":"tfrmmain.actinfolsbrelease.caption","sourcebytes":[108,115,98,45,114,101,108,101,97,115,101],"value":"lsb-release"},
+{"hash":222681717,"name":"tfrmmain.actinfolsbrelease.hint","sourcebytes":[108,115,98,45,114,101,108,101,97,115,101,124,68,105,115,112,108,97,121,32,99,111,110,116,101,110,116,115,32,111,102,32,108,115,98,45,114,101,108,101,97,115,101],"value":"lsb-release|Display contents of lsb-release"}
+]}

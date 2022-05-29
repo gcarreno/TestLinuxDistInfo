@@ -1,0 +1,116 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: forms.main.rscontentsoffile
+msgid "Contents of %s:"
+msgstr ""
+
+#: forms.main.rsdidnotfindfile
+msgid "Did NOT find %s"
+msgstr ""
+
+#: forms.main.rsfoundfile
+msgid "Found %s"
+msgstr ""
+
+#: forms.main.rslookingforfile
+msgid "Looking for %s"
+msgstr ""
+
+#: forms.main.rslsbrelesedistributioncodename
+msgid "Distribution Codename: %s"
+msgstr ""
+
+#: forms.main.rslsbrelesedistributionid
+msgid "Distribution ID: %s"
+msgstr ""
+
+#: forms.main.rslsbrelesedistributionrelease
+msgid "Distribution Release: %s"
+msgstr ""
+
+#: forms.main.rsosreleasename
+msgid "Name: %s"
+msgstr ""
+
+#: forms.main.rsosreleaseversioncodename
+msgid "Version Codename: %s"
+msgstr ""
+
+#: forms.main.rsosreleaseversionid
+msgid "Version ID: %s"
+msgstr ""
+
+#: forms.main.rsvaluesfrom
+msgid "Some values from %s:"
+msgstr ""
+
+#: tfrmmain.actfileexit.caption
+msgid "E&xit"
+msgstr ""
+
+#: tfrmmain.actfileexit.hint
+msgid "Exit"
+msgstr ""
+
+#: tfrmmain.actinfoissue.caption
+msgid "issue"
+msgstr ""
+
+#: tfrmmain.actinfoissue.hint
+msgctxt "tfrmmain.actinfoissue.hint"
+msgid "issue|Display contents of issue"
+msgstr ""
+
+#: tfrmmain.actinfoissuenet.caption
+msgid "issue.net"
+msgstr ""
+
+#: tfrmmain.actinfoissuenet.hint
+msgctxt "tfrmmain.actinfoissuenet.hint"
+msgid "issue.net|Display contents of issue.net"
+msgstr ""
+
+#: tfrmmain.actinfolsbrelease.caption
+msgid "lsb-release"
+msgstr ""
+
+#: tfrmmain.actinfolsbrelease.hint
+msgctxt "tfrmmain.actinfolsbrelease.hint"
+msgid "lsb-release|Display contents of lsb-release"
+msgstr ""
+
+#: tfrmmain.actinfoosrelease.caption
+msgid "os-release"
+msgstr ""
+
+#: tfrmmain.actinfoosrelease.hint
+msgctxt "tfrmmain.actinfoosrelease.hint"
+msgid "os-release|Display contents of os-release"
+msgstr ""
+
+#: tfrmmain.actinfoquery.caption
+msgid "&Query"
+msgstr ""
+
+#: tfrmmain.actinfoquery.hint
+msgctxt "tfrmmain.actinfoquery.hint"
+msgid "Query|Query system for known files"
+msgstr ""
+
+#: tfrmmain.caption
+msgid "frmMain"
+msgstr ""
+
+#: tfrmmain.cgavaiilablemethods.caption
+msgid " Available Methods "
+msgstr ""
+
+#: tfrmmain.mnufile.caption
+msgid "&File"
+msgstr ""
+
+#: tfrmmain.mnuinfo.caption
+msgid "&Information"
+msgstr ""
+

@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Gustavo Carreno <guscarreno@gmail.com>\n"
+"Language-Team: \n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: forms.main.rscontentsoffile
+msgid "Contents of %s:"
+msgstr "Conteúdo de %s:"
+
+#: forms.main.rsdidnotfindfile
+msgid "Did NOT find %s"
+msgstr "Não encontrei %s"
+
+#: forms.main.rsfoundfile
+msgid "Found %s"
+msgstr "Encontrei %s"
+
+#: forms.main.rslookingforfile
+msgid "Looking for %s"
+msgstr "Procurando por %s"
+
+#: forms.main.rslsbrelesedistributioncodename
+msgid "Distribution Codename: %s"
+msgstr "Nome de Código da Distribuição: %s"
+
+#: forms.main.rslsbrelesedistributionid
+msgid "Distribution ID: %s"
+msgstr "ID da Distribuição: %s"
+
+#: forms.main.rslsbrelesedistributionrelease
+msgid "Distribution Release: %s"
+msgstr "Lançamento da Distribuição: %s"
+
+#: forms.main.rsosreleasename
+msgid "Name: %s"
+msgstr "Nome: %s"
+
+#: forms.main.rsosreleaseversioncodename
+msgid "Version Codename: %s"
+msgstr "Nome de Código desta Versão: %s"
+
+#: forms.main.rsosreleaseversionid
+msgid "Version ID: %s"
+msgstr "ID desta Versão: %s"
+
+#: forms.main.rsvaluesfrom
+msgid "Some values from %s:"
+msgstr "Alguns valores vindos de %s:"
+
+#: tfrmmain.actfileexit.caption
+msgid "E&xit"
+msgstr "&Sair"
+
+#: tfrmmain.actfileexit.hint
+msgid "Exit"
+msgstr "Sair"
+
+#: tfrmmain.actinfoissue.caption
+msgid "issue"
+msgstr "issue"
+
+#: tfrmmain.actinfoissue.hint
+msgid "issue|Display contents of issue"
+msgstr "issue|Mostra conteúdo de issue"
+
+#: tfrmmain.actinfoissuenet.caption
+msgid "issue.net"
+msgstr "issue.net"
+
+#: tfrmmain.actinfoissuenet.hint
+msgid "issue.net|Display contents of issue.net"
+msgstr "issue.net|Mostra conteúdo de issue.net"
+
+#: tfrmmain.actinfolsbrelease.caption
+msgid "lsb-release"
+msgstr "lsb-release"
+
+#: tfrmmain.actinfolsbrelease.hint
+msgid "lsb-release|Display contents of lsb-release"
+msgstr "lsb-release|Mostra conteúdo de lsb-release"
+
+#: tfrmmain.actinfoosrelease.caption
+msgid "os-release"
+msgstr "os-release"
+
+#: tfrmmain.actinfoosrelease.hint
+msgid "os-release|Display contents of os-release"
+msgstr "os-release|Mostra conteúdo de os-release"
+
+#: tfrmmain.actinfoquery.caption
+msgid "&Query"
+msgstr "&Procurar"
+
+#: tfrmmain.actinfoquery.hint
+msgid "Query|Query system for known files"
+msgstr "Procurar|Procurar pelos ficheiros conhecidos no systema"
+
+#: tfrmmain.caption
+msgid "frmMain"
+msgstr "frmMain"
+
+#: tfrmmain.cgavaiilablemethods.caption
+msgid " Available Methods "
+msgstr " Métodos Disponíveis "
+
+#: tfrmmain.mnufile.caption
+msgid "&File"
+msgstr "&Ficheiro"
+
+#: tfrmmain.mnuinfo.caption
+msgid "&Information"
+msgstr "&Informação"
+
