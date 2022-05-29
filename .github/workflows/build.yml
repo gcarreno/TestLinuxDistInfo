@@ -1,0 +1,93 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ "*" ]
+    paths-ignore: [ "README.md", "history.md", "release-notes.md" ]
+
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and/or Test
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      matrix:
+        operating-system: [ ubuntu-latest ]
+        lazarus-versions: [ stable, 2.2.0, 2.0.12, 2.0.10 ]
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: Install Lazarus
+      uses: gcarreno/setup-lazarus@v3.0.17
+      with:
+        lazarus-version: ${{ matrix.lazarus-versions }}
+
+    - name: Build the Main App (Windows)
+      if: ${{ matrix.operating-system == 'windows-latest' }}
+      run: lazbuild -B --bm=Release "src/TestLinuxDistInfo.lpi"
+
+    - name: Build the Main App GTK2 (Ubuntu)
+      if: ${{ matrix.operating-system == 'ubuntu-latest' }}
+      run: |
+        lazbuild -B --bm=Release "src/TestLinuxDistInfo.lpi"
+        mv bin/TestLinuxDistInfo bin/TestLinuxDistInfo-gtk2
+
+    - name: Build the Main App Qt5 (Ubuntu)
+      if: ${{ matrix.operating-system == 'ubuntu-latest' }}
+      run: |
+        sudo apt update
+        sudo apt install libqt5pas-dev -y
+        lazbuild -B --bm=Release --ws=qt5 "src/TestLinuxDistInfo.lpi"
+        mv bin/TestLinuxDistInfo bin/TestLinuxDistInfo-qt5
+
+    - name: Upload binary (Ubuntu)
+      if: ${{ (matrix.operating-system == 'ubuntu-latest') }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: TestLinuxDistInfo
+        path: bin/TestLinuxDistInfo-*
+
+  package-release:
+    if: contains(github.ref, '/tags/')
+
+    name: Package and create GitHub Release
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Set output
+      id: vars
+      run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+
+    - name: Download the Release binary
+      uses: actions/download-artifact@v2
+
+    - name: List files
+      run: ls -alF TestLinuxDistInfo
+
+    - name: Create release files
+      run: |
+        cd TestLinuxDistInfo
+        chmod +x TestLinuxDistInfo-*
+        tar -zcvf TestLinuxDistInfo-GTK2-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz TestLinuxDistInfo-gtk2
+        tar -zcvf TestLinuxDistInfo-Qt5-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz TestLinuxDistInfo-qt5
+    - name: Create GitHub release
+      uses: softprops/action-gh-release@v1
+      with:
+        name: TestRestartApplication ${{ steps.vars.outputs.tag }}
+        body_path: release-notes.md
+        files: |
+          TestLinuxDistInfo/*.tar.gz
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
