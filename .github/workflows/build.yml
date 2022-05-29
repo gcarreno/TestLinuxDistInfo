@@ -30,10 +30,6 @@ jobs:
       with:
         lazarus-version: ${{ matrix.lazarus-versions }}
 
-    - name: Build the Main App (Windows)
-      if: ${{ matrix.operating-system == 'windows-latest' }}
-      run: lazbuild -B --bm=Release "src/TestLinuxDistInfo.lpi"
-
     - name: Build the Main App GTK2 (Ubuntu)
       if: ${{ matrix.operating-system == 'ubuntu-latest' }}
       run: |
@@ -49,7 +45,7 @@ jobs:
         mv bin/TestLinuxDistInfo bin/TestLinuxDistInfo-qt5
 
     - name: Upload binary (Ubuntu)
-      if: ${{ (matrix.operating-system == 'ubuntu-latest') }}
+      if: ${{ (matrix.operating-system == 'ubuntu-latest') && (matrix.lazarus-versions == 'stable') }}
       uses: actions/upload-artifact@v2
       with:
         name: TestLinuxDistInfo
@@ -82,8 +78,10 @@ jobs:
         mkdir locale
         cp ../src/i18n/TestLinuxDistInfo.*.po locale
         chmod +x TestLinuxDistInfo-*
-        tar -zcvf TestLinuxDistInfo-GTK2-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz TestLinuxDistInfo-gtk2 locale
-        tar -zcvf TestLinuxDistInfo-Qt5-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz TestLinuxDistInfo-qt5 locale
+        mv TestLinuxDistInfo-gtk2 TestLinuxDistInfo
+        tar -zcvf TestLinuxDistInfo-GTK2-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz TestLinuxDistInfo locale
+        mv TestLinuxDistInfo-qt5 TestLinuxDistInfo
+        tar -zcvf TestLinuxDistInfo-Qt5-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz TestLinuxDistInfo locale
     - name: Create GitHub release
       uses: softprops/action-gh-release@v1
       with:
