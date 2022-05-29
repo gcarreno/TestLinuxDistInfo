@@ -8,3 +8,7 @@
 Searches for the various methods to obtain information about the current installed distro.
 
 Presents the options found and allows to query each one individually.
+
+## Screenshot
+
+![Linux Dark Theme v0.1.1](img/LinuxDarkTheme-v0.1.1.png)
